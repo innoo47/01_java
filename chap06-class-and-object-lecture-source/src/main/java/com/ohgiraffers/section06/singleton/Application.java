@@ -32,6 +32,14 @@ public class Application {
         //  eager2.hashCode() = 189568618
 
 
+        LazySingleton lazy1 = LazySingleton.getInstance();
+        LazySingleton lazy2 = LazySingleton.getInstance();
+        System.out.println("lazy1.hashCode() = " + lazy1.hashCode());
+        System.out.println("lazy2.hashCode() = " + lazy2.hashCode());
+        //lazy1.hashCode() = 122883338
+        //lazy2.hashCode() = 122883338
+
+
 
     }
 }

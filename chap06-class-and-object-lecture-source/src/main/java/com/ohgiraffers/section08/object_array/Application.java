@@ -46,8 +46,8 @@ public class Application {
         //주소값으로 나옴
 
         // 향상된 for문
-        for (Car car : carArr2) {
-            System.out.println(car);
+        for(Car car: carArr) {
+            car.driveMaxSpeed();
         }
 
     }

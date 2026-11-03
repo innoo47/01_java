@@ -25,6 +25,9 @@ public class Application1 {
          * integerNum1 == integerNum2 가 true가 나올 수 있다
          */
 
+        /**
+         * int는 안되지만 Integer는 null을 받을 수 있다
+         */
 
         int inum = 20;
         Integer integerNum1 = Integer.valueOf(20);

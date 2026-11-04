@@ -1,0 +1,6 @@
+#jdbc driver(comment)
+#Wed Nov 04 11:26:25 KST 2026
+driver=com.mysql.jdbc.Driver
+password=student
+url=jdbc\:mysql\://localhost\:3306/test
+username=student

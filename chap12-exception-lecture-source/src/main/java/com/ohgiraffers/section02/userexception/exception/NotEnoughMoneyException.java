@@ -1,0 +1,18 @@
+package com.ohgiraffers.section02.userexception.exception;
+
+/**
+ * 사용자 정의 예외클래스 만들기
+ * Exception클래스를 상속 받으면 된다
+ * 경우에 따라서는 더 상위 타입인 Throwable클래스나 하위 타입의 클래스를 상속받기도 한다
+ */
+
+public class NotEnoughMoneyException extends Exception {
+
+    public NotEnoughMoneyException(String message) {
+        super(message);
+    }
+
+
+
+
+}

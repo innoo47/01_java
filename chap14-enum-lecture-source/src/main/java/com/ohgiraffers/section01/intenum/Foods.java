@@ -1,0 +1,17 @@
+package com.ohgiraffers.section01.intenum;
+
+public interface Foods {
+
+    // 상수필드(public static final), 추상메소드(public abstract)
+//
+//    // 정수 열거 패턴
+//    int MEAL_AN_BUTTE_KIMCHI_STEW = 0;
+//    int MEAL_MINT_SEAWEED_SOUP = 1;
+//    int MEAL_BUNGEOPPANG_SUSI = 2;
+//
+//    int DRINK_RADISH_KIMCHI_LATTE = 0;
+//    int DRINK_WOOLUCK_SMOOTHIE = 1;
+//    int DRINK_RAW_CUTTLFFISH_SHAKE = 2;
+//
+//    int DRINK = ;
+}

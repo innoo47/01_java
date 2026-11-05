@@ -20,13 +20,39 @@ public class Application4 {
         ObjectOutputStream objOut = null;
 
         try {
-            objOut = new ObjectOutputStream(
-                    new BufferedOutputStream(
-                            new FileOutputStream(
-                                    "src/main/java/com/ohgiraffers/section03/filterstream/testObjectStream.txt"
+//            objOut = new ObjectOutputStream(
+//                    new BufferedOutputStream(
+//                            new FileOutputStream(
+//                                    "src/main/java/com/ohgiraffers/section03/filterstream/testObjectStream.txt", true
+//                                    // append -> true // java.io.StreamCorruptedException: invalid type code: AC
+//                                    // MyOutputStream에서 헤더를 수정한다
+//                            )
+//                    )
+//            );
+
+            String filePath = "src/main/java/com/ohgiraffers/section03/filterstream/testObjectStream.txt";
+            boolean exists = new File(filePath).exists();
+
+            if (exists) {
+                // 파일이 있는 경우
+                objOut = new MyOutputStream(
+                            new BufferedOutputStream(
+                                new FileOutputStream(
+                                        "src/main/java/com/ohgiraffers/section03/filterstream/testObjectStream.txt", true
+                                )
                             )
-                    )
-            );
+                );
+
+            } else {
+                // 파일이 없는 경우
+                objOut = new ObjectOutputStream(
+                            new BufferedOutputStream(
+                                new FileOutputStream(
+                                    "src/main/java/com/ohgiraffers/section03/filterstream/testObjectStream.txt", true
+                                )
+                            )
+                );
+            }
 
             for (int i = 0; i < outputMembers.length; i++) {
                 objOut.writeObject(outputMembers[i]);

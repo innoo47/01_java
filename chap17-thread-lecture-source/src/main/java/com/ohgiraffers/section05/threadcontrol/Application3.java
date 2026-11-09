@@ -26,6 +26,22 @@ public class Application3 {
 
         sleepingWorker.start();
         Thread.sleep(300);
+        sleepingWorker.interrupt();
+        sleepingWorker.join();
+        System.out.println("interrupted : " + sleepingWorker.isAlive());
+
+        Thread busyWorker = new Thread(() -> {
+           long count = 0;
+           while (!Thread.currentThread().isInterrupted()) {
+               count++;
+           }
+        });
+
+        busyWorker.start();
+        Thread.sleep(100);
+        busyWorker.interrupt();
+        busyWorker.join(1000);
+        System.out.println("interrupted : " + !busyWorker.isAlive());
 
 
 
